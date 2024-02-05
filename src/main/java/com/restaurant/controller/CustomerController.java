@@ -6,9 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.restaurant.model.CustomerInfo;
 import com.restaurant.service.ICustomerService;
@@ -39,9 +36,14 @@ public class CustomerController {
 		return "customer-form";
 }
 
-@RequestMapping(value = "/deleteCustomer", method = { RequestMethod.GET, RequestMethod.POST })
-public String deleteCustomer(@RequestParam("id") int id) {
-	service.deleteCustomer(id);
-	return "delete";
-}
+//@GetMapping("/deleteCustomer")
+//public String deleteCustomer(Model model) {
+//
+//}
+
+//@RequestMapping(value = "/deleteCustomer", method = { RequestMethod.GET, RequestMethod.POST })
+//public String deleteCustomer(@RequestParam("id") int id) {
+//	service.deleteCustomer(id);
+//	return "delete";
+//}
 }
