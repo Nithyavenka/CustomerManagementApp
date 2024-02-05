@@ -1,7 +1,5 @@
 package com.restaurant.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +11,16 @@ public class CustomerService implements ICustomerService {
 
 	@Autowired
 	private ICustomerRepo repo;
-	@Override
-	public List<CustomerInfo> insertCustomer() {
 
-		return (List<CustomerInfo>) repo;
+	@Override
+	public void saveCustomer(CustomerInfo customer) {
+		repo.save(customer);
+	}
+
+	@Override
+	public void deleteCustomer(int id) {
+		repo.deleteById(id);
+
 	}
 
 }

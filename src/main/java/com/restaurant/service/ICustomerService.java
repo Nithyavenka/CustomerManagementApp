@@ -1,10 +1,11 @@
 package com.restaurant.service;
 
-import java.util.List;
-
 import com.restaurant.model.CustomerInfo;
 
 public interface ICustomerService {
 
-	public List<CustomerInfo> insertCustomer();
+	// public List<CustomerInfo> insertCustomer();
+	public void saveCustomer(CustomerInfo customer);
+
+	public void deleteCustomer(int id);
 }
